@@ -1,0 +1,536 @@
+
+/* Basic Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #101010;
+    color: #f7f7f7;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+video {
+    display: block;
+    width: 100%;
+}
+
+img {
+    object-fit: cover;
+}
+
+span {
+    color: #ff3939;
+}
+
+.tagline {
+    color: #ff4949;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+/* Header and Navigation */
+.header {
+    background: #101010;
+    border-bottom: 1px solid #302020;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.nav-links a,
+.footer-links a {
+    color: #d4d4d4;
+    font-size: 0.9rem;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover,
+.footer-links a:hover {
+    color: #ff3939;
+}
+
+.contact-btn,
+.primary-btn {
+    display: inline-block;
+    background: #ed2929;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.contact-btn:hover,
+.primary-btn:hover {
+    background: #c91818;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 24px 85px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 5vw, 4.7rem);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero-description {
+    max-width: 470px;
+    color: #bcbcbc;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    height: 380px;
+    border-radius: 18px;
+    border: 1px solid #3a2929;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    background: #171717eF;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* Menu Section */
+.menu-section {
+    background: #171717;
+    padding: 75px 24px 85px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 42px;
+}
+
+.section-heading h2,
+.video-text h2,
+.about-section h2,
+.support-section h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child,
+.video-text > p:not(.tagline) {
+    color: #bcbcbc;
+}
+
+.food-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.food-card {
+    background: #202020;
+    border: 1px solid #353535;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+    border-color: #ff3939;
+}
+
+.food-card img {
+    height: 220px;
+    transition: transform 0.35s ease;
+}
+
+.food-card:hover img {
+    transform: scale(1.035);
+}
+
+.food-info {
+    padding: 24px;
+}
+
+.food-category {
+    color: #ff4949;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.food-info h3 {
+    font-size: 1.3rem;
+    line-height: 1.35;
+    margin: 10px 0;
+}
+
+.food-info p {
+    color: #bcbcbc;
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+}
+
+.text-link {
+    color: #ff5b5b;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.text-link:hover {
+    color: #ffffff;
+}
+
+/* Pizza Video Section */
+.video-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 24px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.video-text h2 {
+    margin-bottom: 20px;
+}
+
+.video-text > p:not(.tagline) {
+    max-width: 420px;
+}
+
+.video-frame {
+    background: #1c1c1c;
+    border: 1px solid #383838;
+    padding: 10px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.video-frame video {
+    height: 310px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #080808;
+}
+
+.video-caption {
+    color: #bcbcbc;
+    padding: 12px 5px 3px;
+    font-size: 0.85rem;
+}
+
+/* About Section */
+.about-section {
+    max-width: 1152px;
+    margin: 0 auto 75px;
+    padding: 38px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    background: #1c1c1c;
+    border: 1px solid #353535;
+    border-radius: 16px;
+}
+
+.about-icon {
+    font-size: 4rem;
+    flex-shrink: 0;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+}
+
+.about-section div:last-child > p:last-child {
+    color: #bcbcbc;
+    max-width: 780px;
+}
+
+/* Customer Service */
+.support-section {
+    text-align: center;
+    padding: 75px 24px;
+    background: #211515;
+    border-top: 1px solid #402020;
+    border-bottom: 1px solid #402020;
+}
+
+.support-section > p:not(.tagline):not(.email-address) {
+    color: #c7c7c7;
+    max-width: 570px;
+    margin: 0 auto 25px;
+}
+
+.email-address {
+    margin-top: 20px;
+    font-size: 0.92rem;
+    color: #c7c7c7;
+    overflow-wrap: anywhere;
+}
+
+.email-address a,
+.footer-content a:not(.logo) {
+    color: #ff6565;
+}
+
+.email-address a:hover,
+.footer-content a:not(.logo):hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background: #0b0b0b;
+    padding: 40px 24px 18px;
+}
+
+.footer-content {
+    max-width: 1152px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 35px;
+    padding-bottom: 30px;
+}
+
+.footer-content p {
+    color: #999999;
+    font-size: 0.88rem;
+    margin-top: 8px;
+}
+
+.footer-content h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-content > div:last-child > a {
+    overflow-wrap: anywhere;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-top: 10px;
+}
+
+.copyright {
+    border-top: 1px solid #292929;
+    text-align: center;
+    color: #888888;
+    padding-top: 18px;
+    font-size: 0.82rem;
+}
+
+/* Tablet Layout */
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px 24px;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero-image img {
+        height: 320px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .video-section {
+        gap: 30px;
+    }
+
+    .video-frame video {
+        height: 260px;
+    }
+
+    .about-section {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px 16px;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .contact-btn {
+        padding: 10px 13px;
+        font-size: 0.82rem;
+    }
+
+    .nav-links {
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 0.82rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 48px 18px 55px;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 3.1rem;
+    }
+
+    .hero-image img {
+        height: 260px;
+    }
+
+    .menu-section {
+        padding: 55px 18px;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .food-card img {
+        height: 235px;
+    }
+
+    .food-info {
+        padding: 20px;
+    }
+
+    .video-section {
+        grid-template-columns: 1fr;
+        padding: 55px 18px;
+        gap: 25px;
+    }
+
+    .video-frame video {
+        height: 230px;
+    }
+
+    .about-section {
+        margin: 0 18px 55px;
+        padding: 25px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .about-icon {
+        font-size: 3rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .support-section {
+        padding: 55px 18px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-links {
+        gap: 14px 20px;
+    }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
